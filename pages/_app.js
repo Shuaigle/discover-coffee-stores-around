@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Component {...pageProps} />
       <footer>
-        <p>© 2022 Shuaigle</p>
+        <p>© 2022 Shuaigle Website</p>
       </footer>      
     </div>)
 }
