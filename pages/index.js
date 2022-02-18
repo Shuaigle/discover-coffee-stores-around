@@ -19,13 +19,13 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Banner 
+        <Banner
           buttonText="View stores nearby" handleOnClick={handleBannerBtnClick}
         />
         <div className={styles.heroImage}>
-        <Image src="/static/omlet.jpeg" width={700} height={400}></Image>
+          <Image src="/static/Cafe-Coffee-PNG-Free-Download.png" width={400} height={400}></Image>
         </div>
-      </main>   
+      </main>
     </div>
-  )
-}
+  );
+};
