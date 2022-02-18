@@ -14,3 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The gradient background page was created by [https://meshgradient.com/]
 
+### Router
+The routers are dynamic and file-based.
+
+### Link
+I use next/link instead of traditional anchor in html to link in the same website, and the benefits are not reloading while clicking the pages(it prefetched the contents), thus impoves more efficiency.
