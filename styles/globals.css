@@ -8,7 +8,7 @@ body {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #373b64;
+  color: #282c53;
   height: 100%;
   }
 
@@ -22,8 +22,8 @@ a {
 }
 
 :root{
-  --text-purple:rgba(67, 56, 202, 1);
-  --text-purple-dark:rgb(8, 5, 114);
-  --text-black:rgba(17, 24, 39, 1);
+  --text-purple:rgb(76, 30, 102);
+  --text-purple-dark:rgb(22, 21, 71);
+  --text-black:rgb(38, 53, 87);
   --text-white-100:rgb(113, 135, 180);
 }

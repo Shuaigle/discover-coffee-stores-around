@@ -6,9 +6,13 @@ const CoffeeStore = () => {
     console.log('router', router)
     return (
     <div>
-        Coffee Store Page {router.query.id}
+        Welcome To Coffee Store Page {router.query.id}
+        <br />
         <br />
         <Link href="/"><a>Back to home</a></Link>
+        <br />
+        <br />
+        <Link href="/coffee-store/page"><a>Go to a page</a></Link>
     </div>
         );
 };
