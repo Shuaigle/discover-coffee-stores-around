@@ -19,3 +19,6 @@ The routers are dynamic and file-based.
 
 ### Link
 I use next/link instead of traditional anchor in html to link in the same website, and the benefits are not reloading while clicking the pages(it prefetched the contents), thus impoves more efficiency.
+
+### Image
+Nextjs only download the images we are now using.
