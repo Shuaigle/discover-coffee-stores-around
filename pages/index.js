@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+
 import Banner from '../components/banner'
+import Card from '../components/card'
+
 import Image from 'next/image'
 
 export default function Home() {
@@ -24,6 +27,26 @@ export default function Home() {
         />
         <div className={styles.heroImage}>
           <Image src="/static/Cafe-Coffee-PNG-Free-Download.png" width={400} height={400}></Image>
+        </div>
+        <div className={styles.cardLayout}>
+          <Card 
+            name="DarkHorse Coffee" 
+            imgUrl="/static/omlet.jpeg" 
+            href="/coffee-store/darkhorse-coffee"
+            className={styles.card}
+          />
+          <Card 
+            name="DarkHorse Coffee" 
+            imgUrl="/static/omlet.jpeg" 
+            href="/coffee-store/darkhorse-coffee"
+            className={styles.card}
+          />
+          <Card 
+            name="DarkHorse Coffee" 
+            imgUrl="/static/omlet.jpeg" 
+            href="/coffee-store/darkhorse-coffee"
+            className={styles.card}
+          />
         </div>
       </main>
     </div>
