@@ -26,4 +26,4 @@ Nextjs only download the images we are now using.
 ### Static Site Generation
 Added SSG properties to pre-render the coffee-store pages
 
-### Icons
+### Icons Oh
