@@ -23,5 +23,5 @@ I use next/link instead of traditional anchor in html to link in the same websit
 ### Image
 Nextjs only download the images we are now using.
 
-### getStaticProps
-Added SSG properties to prefetch the coffee-store pages
+### Static Site Generation
+Added SSG properties to pre-render the coffee-store pages

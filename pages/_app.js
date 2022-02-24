@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <footer>
         <p 
-        style={{ position: "absolute", left: "48%", bottom: 0, width: "100%" }}
+        style={{ position: "relative", left: "50%", bottom: 0, width: "100%" }}
         >2022 Shuaigle 
         </p>
       </footer>

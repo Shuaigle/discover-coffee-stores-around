@@ -21,7 +21,7 @@ const Card = (props) => {
                     </div>
                 </div>
             </a>
-        </Link>);
+        </Link>)
 }
 
-export default Card;
+export default Card
