@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: RobotoMono-Bold, RobotoMono-Light, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #282c53;
   
@@ -40,4 +40,18 @@ a {
   --text-purple-dark:rgb(22, 21, 71);
   --text-black:rgb(38, 53, 87);
   --text-white-100:rgb(113, 135, 180);
+}
+
+@font-face {
+  font-family: 'RobotoMono-Light';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/RobotoMono-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoMono-Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/RobotoMono-Bold.ttf) format('truetype');
 }

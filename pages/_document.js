@@ -6,21 +6,21 @@ class MyDocument extends Document{
         <Html lang="en">
                 <Head>
                     <link 
-                    rel="preload" 
-                    href="/fonts/UnifrakturCook-Bold.ttf" 
+                    rel="preload prefetch" 
+                    href="/fonts/RobotoMono-Bold.ttf" 
                     as="font" 
                     crossOrigin="anonymous"
                     ></link>
                     <link 
-                    rel="preload" 
-                    href="/fonts/PressStart2P-Regular.ttf" 
+                    rel="preload prefetch" 
+                    href="/fonts/RobotoMono-Light.ttf" 
                     as="font" 
                     crossOrigin="anonymous"
                     ></link>
                 </Head>
                 <body>
                     <Main></Main>
-                    <NextScript></NextScript>
+                    <NextScript />
                 </body>
             </Html>
         )
