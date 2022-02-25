@@ -38,7 +38,7 @@ const CoffeeStore = (props) => {
     if (router.isFallback) {
         return <div>Loading...</div>
     }
-    const { address, name, neighbourhood, imgUrl } = props.coffeeStore;
+    const {address, name, neighbourhood, imgUrl} = props.coffeeStore
     const hangleUpvoteButton = () => {
         console.log("handle upvote")
     }
@@ -64,19 +64,34 @@ const CoffeeStore = (props) => {
                         height={360}
                         className={styles.storeImg}
                         alt={name}
-                    ></Image>
+                    />
                 </div>
                 <div className={cls("glass", styles.col2)}>
                     <div className={styles.iconWrapper}>
-                        <Image src="/static/icons/places.svg" width="24" height="24"></Image>
+                        <Image 
+                            src="/icons/places.svg" 
+                            width={24}
+                            height={24}
+                            alt="places icon"
+                        />
                         <p className={styles.text}>{address}</p>
                     </div>
                     <div className={styles.iconWrapper}>
-                        <Image src="/static/icons/nearMe.svg" width="24" height="24"></Image>
+                        <Image 
+                            src="/icons/nearMe.svg" 
+                            width={24} 
+                            height={24}
+                            alt="near me icon"
+                        />
                         <p className={styles.text}>{neighbourhood}</p>
                     </div>
                     <div className={styles.iconWrapper}>
-                        <Image src="/static/icons/stars.svg" width="24" height="24"></Image>
+                        <Image 
+                            src="/icons/stars.svg" 
+                            width={24} 
+                            height={24}
+                            alt="stars icon"
+                        />
                         <p className={styles.text}>1</p>
                     </div>
 

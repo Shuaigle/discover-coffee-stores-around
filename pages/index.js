@@ -7,6 +7,19 @@ import Card from '../components/card'
 import coffeeStoresData from '../data/coffee-stores.json'
 
 export async function getStaticProps(context) {
+  const options = {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      Authorization: 'fsq3leKQt6GWLWEnIdlWvsWVrjqyyCm45flt+wS6yWMmCZo='
+    }
+  };
+  
+  fetch('https://api.foursquare.com/v3/places/nearby?ll=24.994480%2C%20121.496410&hacc=1.22&altitude=1.22&query=coffee&limit=8', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+  
   return {
     props: { coffeeStoresData, },
   } // prefetch coffeeStores from imported json data
@@ -53,5 +66,5 @@ export default function Home(props) {
           </>}
       </main>
     </div>
-  );
-};
+  )
+}
