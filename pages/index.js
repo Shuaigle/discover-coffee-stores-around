@@ -11,7 +11,7 @@ export async function getStaticProps(context) {
     method: 'GET',
     headers: {
       Accept: 'application/json',
-      Authorization: 'fsq3leKQt6GWLWEnIdlWvsWVrjqyyCm45flt+wS6yWMmCZo='
+      Authorization: ''
     }
   };
   
