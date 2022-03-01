@@ -4,30 +4,20 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Banner from '../components/banner'
 import Card from '../components/card'
-import coffeeStoresData from '../data/coffee-stores.json'
+import { fetchCoffeeStores } from '../lib/coffee-stores'
 
 export async function getStaticProps(context) {
-  const options = {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      Authorization: ''
-    }
-  };
-  
-  fetch('https://api.foursquare.com/v3/places/nearby?ll=24.994480%2C%20121.496410&hacc=1.22&altitude=1.22&query=coffee&limit=8', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-  
+  const coffeeStores = await fetchCoffeeStores()
   return {
-    props: { coffeeStoresData, },
-  } // prefetch coffeeStores from imported json data
+    props: {
+      coffeeStores,
+    },
+  }
 }
 
 export default function Home(props) {
   console.log('props', props)
-
+  const coffeeStores = props.coffeeStores
   const handleBannerBtnClick = () => {
     console.log("Desiring Handle Banner Button Click");
   };
@@ -48,16 +38,17 @@ export default function Home(props) {
         <div className={styles.heroImage}>
           <Image src="/static/Cafe-Coffee-PNG-Free-Download.png" width={400} height={400}></Image>
         </div>
-        {coffeeStoresData.length > 0 &&
+
+        {coffeeStores.length > 0 &&
           <>
             <h2 className={styles.heading2}>Toronto coffee stores</h2>
             <div className={styles.cardLayout}>
-              {coffeeStoresData.map((coffeeStore) => {
+              {coffeeStores.map((coffeeStore) => {
                 return (
                   <Card
                     key={coffeeStore.id}
                     name={coffeeStore.name}
-                    imgUrl={coffeeStore.imgUrl}
+                    imgUrl={coffeeStore.imgUrl || "https://images.unsplash.com/photo-1498804103079-a6351b050096?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80"}
                     href={`/coffee-store/${coffeeStore.id}`}
                     className={styles.card}
                   />);
