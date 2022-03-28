@@ -14,7 +14,7 @@ export async function getStaticProps(staticProps) {
     return {
         props: {
             coffeeStore: coffeeStores.find((coffeeStore) => {
-                return coffeeStore.fsq_id.toString() === params.id;
+                return coffeeStore.id.toString() === params.id;
             })
         }
     }
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
     const paths = coffeeStores.map((coffeeStore) => {
         return {
             params: {
-                id: coffeeStore.fsq_id.toString(),
+                id: coffeeStore.id.toString(),
             }
         }
     })
@@ -41,7 +41,7 @@ const CoffeeStore = (props) => {
     if (router.isFallback) {
         return <div>Loading...</div>
     }
-    const {address, name, neighbourhood, imgUrl} = props.coffeeStore
+    const {address, neighbourhood, name, imgUrl} = props.coffeeStore
     const hangleUpvoteButton = () => {
         console.log("handle upvote")
     }
@@ -79,6 +79,7 @@ const CoffeeStore = (props) => {
                         />
                         <p className={styles.text}>{address}</p>
                     </div>
+                    {neighbourhood && (
                     <div className={styles.iconWrapper}>
                         <Image 
                             src="/icons/nearMe.svg" 
@@ -88,6 +89,7 @@ const CoffeeStore = (props) => {
                         />
                         <p className={styles.text}>{neighbourhood}</p>
                     </div>
+                    )}
                     <div className={styles.iconWrapper}>
                         <Image 
                             src="/icons/stars.svg" 

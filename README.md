@@ -24,6 +24,10 @@ I use next/link instead of traditional anchor in html to link in the same websit
 Nextjs only download the images we are now using.
 
 ### Static Site Generation
-Added SSG properties to pre-render the coffee-store pages
+Added SSG properties to pre-render the coffee-store pages.
 
-### Icons Oh
+### Foursquare API
+It was used to fetch the nearby coffee shops!
+
+### Unsplash API
+I use this for creating high quality coffee store images. 
