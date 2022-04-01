@@ -41,7 +41,7 @@ export default function Home(props) {
 
         {coffeeStores.length > 0 &&
           <>
-            <h2 className={styles.heading2}>Toronto coffee stores</h2>
+            <h2 className={styles.heading2}>Abudabi coffee stores</h2>
             <div className={styles.cardLayout}>
               {coffeeStores.map((coffeeStore) => {
                 return (
